@@ -1,5 +1,5 @@
 # Functional Requirements
-> Version: V00.01.00
+> Version: V00.07.00
 
 See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) for base requirements (FR-MA-*).
 
@@ -7,6 +7,10 @@ See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) f
 
 ### Explain folder v2/explain
 - [x] **V2-EXPLAIN-01** explain for simulate Durable Objects with local filesystem 
+
+### Version Separation
+- [ ] **V2-VERS_SEPA-01** we make sure that v1 stays as minimal as possible and all v2 expansion have a efficient oo structure
+- [ ] **V2-VERS_SEPA-02** same is valid for the sources in context of testing
 
 ### Storage Backend (Configurable)
 - [x] **V2-STORAGE-01** BaseAgent option "dur" to use Durable Objects instead of R2
@@ -17,10 +21,12 @@ See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) f
 - [x] **V2-TEST-01** Sim mode testing for Durable Objects simulation
 - [x] **V2-TEST-02** Test V2-STORAGE requirements via integration tests
 - [x] **V2-TEST-03** Reference V2 requirements: **V2-STORAGE-01**, **V2-STORAGE-02**, **V2-STORAGE-03**
+- [ ] **V2-TEST-04** Test V2-VERS_SEPA requirements in src/tests/version-separation.test.ts
 
 ### Test
 - [x] **TEST-V2-01** Integration tests for Durable Objects simulation in src/tests/integration/durable-objects-sim.test.ts
 - [x] **TEST-V2-02** Reference v2 requirements: **V2-STORAGE-01**, **V2-STORAGE-02**, **V2-STORAGE-03**
+- [ ] **TEST-V2-03** Test version separation in src/tests/version-separation.test.ts
 
 ### Deployment
 - [x] **V2-DEPLOY-01** Storage binding (R2 or Durable Objects)
@@ -34,6 +40,7 @@ See [conventions/72_conv_change_history_for_code.md](conventions/72_conv_change_
 
 | Version | Date | Author | Reason |
 |---------|------|--------|--------|
+| V00.07.00 | 2026-06-04 | ai(cline) | Add V2-VERS_SEPA requirements and tests |
 | V00.06.00 | 2026-06-04 | ai(cline) | Add sim filesystem explanation |
 | V00.05.00 | 2026-06-04 | ai(cline) | Fix testing requirements and add missing test |
 | V00.02.00 | 2026-06-04 | ai(cline) | Add Test chapter per testing convention |
