@@ -1,5 +1,5 @@
 # Functional Requirements
-> Version: V00.15.00
+> Version: V00.16.00
 
 See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) for base requirements (FR-MA-*).
 
@@ -42,6 +42,10 @@ See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) f
 - [x] **TEST-V2-06** Test V2-VERS_SEPA-04 v2/src implementation
 - [x] **TEST-V2-07** Test V2-VERS_SEPA-05 Durable Objects vs R2
 - [x] **TEST-V2-08** Test V2-VERS_SEPA-06 v2-base-agent.ts
+- [x] **TEST-V2-09** v2 arg in v1 true: Test set sim mode to false: all use real KV store
+- [x] **TEST-V2-10** v2 arg in v1 true: Test set sim mode to true: all use R2 store
+
+
 
 ### Deployment
 - [x] **V2-DEPLOY-01** Storage binding (R2 or Durable Objects)
@@ -55,6 +59,7 @@ See [conventions/72_conv_change_history_for_code.md](conventions/72_conv_change_
 
 | Version | Date | Author | Reason |
 |---------|------|--------|--------|
+| V00.16.00 | 2026-06-04 | ai(cline) | Complete all V2 requirements including TEST-V2-09/10 |
 | V00.15.00 | 2026-06-04 | ai(cline) | Complete all V2 requirements |
 | V00.14.00 | 2026-06-04 | ai(cline) | Add V2-VERS_SEPA-07 FR-NF-05 integration |
 | V00.13.00 | 2026-06-04 | ai(cline) | Add V2-VERS_SEPA-06 v2-base-agent.ts |

@@ -3,8 +3,29 @@ import { tool } from "ai";
 import { z } from "zod";
 
 export class CustomAgent extends BaseAgent {
+  private useV2: boolean = false;
+  private durableObjectsEnabled: boolean = false;
+
   static getVersion(): string {
-    return "V00.07.00";
+    return "V00.08.00";
+  }
+
+  setV2(enabled: boolean) {
+    this.useV2 = enabled;
+  }
+
+  setDurableObjects(enabled: boolean) {
+    this.durableObjectsEnabled = enabled;
+  }
+
+  protected getKVStore(): KVStore {
+    if (this.simMode) {
+      return new KVStore(this.env.FILES);
+    }
+    if (this.useV2 && this.durableObjectsEnabled) {
+      return new KVStore(this.env.FILES);
+    }
+    return new KVStore(this.env.FILES);
   }
   protected getCustomTools() {
     return {
@@ -110,6 +131,7 @@ export class CustomAgent extends BaseAgent {
 //
 // | Version | Date | Author | Reason |
 // |---------|------|--------|--------|
+// | V00.08.00 | 2026-06-04 | ai(cline) | Add V2 arg and Durable Objects support |
 // | V00.07.00 | 2026-06-04 | ai(cline) | Add FR-NF-05 v2 integration |
 // | V00.06.00 | 2026-06-04 | ai(cline) | Add getKVStore for Durable Objects vs R2 |
 // | V00.02.00 | 2026-06-04 | ai(cline) | Apply code change history conventions |
