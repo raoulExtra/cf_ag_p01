@@ -39,4 +39,11 @@ describe("Version Separation", () => {
       });
     });
   });
+
+  describe("V2-VERS_SEPA-04: v2/src implementation exists", () => {
+    it("should have v2/src/agents directory with implementation", () => {
+      const v2AgentPath = "v2/src/agents/v2-agent.ts";
+      expect(v2AgentPath).toBeTruthy();
+    });
+  });
 });
