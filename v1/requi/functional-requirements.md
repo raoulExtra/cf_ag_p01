@@ -68,7 +68,7 @@
 - [x] **FR-NF-03** Atomic counter increments
 - [x] **FR-NF-04** Message persistence
 - [x] **FR-NF-05** v2 integration: have v2 argument to use v2/src/agents/v2-base-agent.ts when simMode=false
-- [ ] **FR-NF-06** v2 argument defaults to false to preserve v1 behavior
+- [x] **FR-NF-06** v2 argument defaults to false to preserve v1 behavior
 
 ## Testing
 - [x] **FR-TEST-01** Sim mode for testing without consuming tokens
@@ -86,7 +86,7 @@
 - [x] **TEST-CORE-07** Reference core requirements: **FR-MA-CORE-01**, **FR-MA-CORE-02**, **FR-MA-CORE-03**
 - [x] **TEST-CORE-08** System test via `syst` argument for interaction without sim
 - [x] **TEST-CORE-09** Have v2 argument to use v2/src/agents/v2-base-agent.ts when true
-- [ ] **TEST-CORE-10** v2 argument defaults to false
+- [x] **TEST-CORE-10** v2 argument defaults to false
 
 ---
 

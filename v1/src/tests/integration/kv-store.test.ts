@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, afterEach } from "vitest";
+import { describe, it, expect, beforeEach, vi } from "vitest";
 import { KVStore } from "../../shared/kv-store";
 
 describe("KVStore Integration (Sim Mode)", () => {
@@ -8,12 +8,16 @@ describe("KVStore Integration (Sim Mode)", () => {
   beforeEach(() => {
     mockBucket = {
       data: {} as Record<string, string>,
-      get: jest.fn(),
-      put: jest.fn(),
-      delete: jest.fn(),
-      list: jest.fn(),
+      get: vi.fn(),
+      put: vi.fn(),
+      delete: vi.fn(),
+      list: vi.fn(),
     };
     kv = new KVStore(mockBucket as any);
+  });
+
+  it("should have getVersion static method", () => {
+    expect(KVStore.getVersion()).toBe("V00.06.00");
   });
 
   it("should set and get a value", async () => {

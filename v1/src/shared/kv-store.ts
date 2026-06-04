@@ -7,7 +7,11 @@ export class KVStore {
   async get<T = any>(key: string): Promise<T | null> {
     const value = await this.files.get(key);
     if (!value) return null;
-    return JSON.parse(await value.text());
+    try {
+      return JSON.parse(await value.text());
+    } catch {
+      return null;
+    }
   }
 
   async set<T = any>(key: string, value: T): Promise<void> {

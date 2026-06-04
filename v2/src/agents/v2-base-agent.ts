@@ -1,5 +1,5 @@
-import { BaseAgent } from "../../v1/src/agents/base-agent";
-import { KVStore } from "../../v1/src/shared/kv-store";
+import { BaseAgent } from "../../../v1/src/agents/base-agent";
+import { KVStore } from "../../../v1/src/shared/kv-store";
 
 export class V2BaseAgent extends BaseAgent {
   private durableObjectsEnabled: boolean = false;

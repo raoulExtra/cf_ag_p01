@@ -1,4 +1,31 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach, vi } from "vitest";
+
+vi.mock("../../agents/base-agent", () => {
+  const BaseAgent = class {
+    agentName: string;
+    partnerInputPath: string;
+    partnerOutputPath: string;
+    role: string = "collaborator";
+    simMode: boolean = true;
+    kv: any;
+    constructor(name: string, inputPath?: string, outputPath?: string) {
+      this.agentName = name;
+      this.partnerInputPath = inputPath || '';
+      this.partnerOutputPath = outputPath || '';
+    }
+    setSimMode(enabled: boolean) { this.simMode = enabled; }
+    setRole(role: string) { this.role = role; }
+    getDummyResponse(msg: string) {
+      const lowerMsg = msg.toLowerCase();
+      if (lowerMsg.includes("name")) return "Here " + this.agentName + " in role " + this.role + ".";
+      if (lowerMsg.includes("role")) return "Here " + this.agentName + " in role " + this.role + ".";
+      if (lowerMsg.includes("hello") || lowerMsg.includes("hi")) return "Here " + this.agentName + " in role " + this.role + ".";
+      return "Ready to collaborate.";
+    }
+  };
+  return { BaseAgent };
+});
+
 import { BaseAgent } from "../../agents/base-agent";
 
 describe("Multi-Agent Simulation", () => {

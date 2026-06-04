@@ -5,42 +5,50 @@ export function getVersion(): string {
   return "V00.06.00";
 }
 
-export const readFileTool = (env: Env) => tool({
-  description: "Read a file from R2 storage",
-  inputSchema: z.object({ path: z.string() }),
-  execute: async ({ path }) => {
-    const value = await env.FILES.get(path);
-    if (!value) return { error: `File not found: ${path}` };
-    return { path, content: await value.text() };
-  }
-});
-
-export const writeFileTool = (env: Env) => tool({
-  description: "Write content to a file",
-  inputSchema: z.object({ path: z.string(), content: z.string() }),
-  execute: async ({ path, content }) => {
-    await env.FILES.put(path, content);
-    return { path, size: content.length, status: "written" };
-  }
-});
-
-export const listFilesTool = (env: Env) => tool({
-  description: "List files in a directory",
-  inputSchema: z.object({ path: z.string() }),
-  execute: async ({ path }) => {
-    const files = [];
-    for await (const obj of env.FILES.list({ prefix: path })) {
-      files.push(obj.key);
+export function readFileTool(env: Env) {
+  return tool({
+    description: "Read a file from R2 storage",
+    inputSchema: z.object({ path: z.string() }),
+    execute: async ({ path }) => {
+      const value = await env.FILES.get(path);
+      if (!value) return { error: `File not found: ${path}` };
+      return { path, content: await value.text() };
     }
-    return { path, files };
-  }
-});
+  });
+}
 
-export const fileTools = (env: Env) => ({
-  read_file: readFileTool(env),
-  write_file: writeFileTool(env),
-  list_files: listFilesTool(env)
-});
+export function writeFileTool(env: Env) {
+  return tool({
+    description: "Write content to a file",
+    inputSchema: z.object({ path: z.string(), content: z.string() }),
+    execute: async ({ path, content }) => {
+      await env.FILES.put(path, content);
+      return { path, size: content.length, status: "written" };
+    }
+  });
+}
+
+export function listFilesTool(env: Env) {
+  return tool({
+    description: "List files in a directory",
+    inputSchema: z.object({ path: z.string() }),
+    execute: async ({ path }) => {
+      const files = [];
+      for await (const obj of env.FILES.list({ prefix: path })) {
+        files.push(obj.key);
+      }
+      return { path, files };
+    }
+  });
+}
+
+export function fileTools(env: Env) {
+  return {
+    read_file: readFileTool(env),
+    write_file: writeFileTool(env),
+    list_files: listFilesTool(env)
+  };
+}
 
 // Change History
 //

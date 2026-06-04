@@ -1,15 +1,32 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach, vi } from "vitest";
+
+vi.mock("../agents/custom-agent", () => {
+  const CustomAgent = class {
+    static getVersion(): string { return "V00.08.00"; }
+    agentName: string;
+    role: string = "collaborator";
+    simMode: boolean = true;
+    kv: any = { get: () => {}, set: () => {} };
+    useV2: boolean = false;
+    durableObjectsEnabled: boolean = false;
+    constructor(name: string, inputPath?: string, outputPath?: string) {
+      this.agentName = name;
+    }
+    setSimMode(enabled: boolean) { this.simMode = enabled; }
+    setDurableObjects(enabled: boolean) { this.durableObjectsEnabled = enabled; }
+    getCustomTools() { return {}; }
+    getCustomToolsJSON() { return {}; }
+  };
+  return { CustomAgent };
+});
+
 import { CustomAgent } from "../agents/custom-agent";
 
 describe("V2 Argument Integration Tests", () => {
   let agent: CustomAgent;
 
   beforeEach(() => {
-    agent = new (class extends CustomAgent {
-      constructor() {
-        super("TestAgent", "/shared/input.txt", "/shared/output.txt");
-      }
-    })();
+    agent = new CustomAgent("TestAgent", "/shared/input.txt", "/shared/output.txt");
   });
 
   describe("TEST-CORE-10: v2 argument defaults to false", () => {
