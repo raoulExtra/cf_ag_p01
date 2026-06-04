@@ -4,7 +4,7 @@ import { z } from "zod";
 
 export class CustomAgent extends BaseAgent {
   static getVersion(): string {
-    return "V00.05.00";
+    return "V00.06.00";
   }
   protected getCustomTools() {
     return {

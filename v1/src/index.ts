@@ -5,7 +5,7 @@ import { Agent2 } from "./agents/agent2";
 export { Agent1, Agent2 };
 
 export function getVersion(): string {
-  return "V00.05.00";
+  return "V00.06.00";
 }
 
 export default {

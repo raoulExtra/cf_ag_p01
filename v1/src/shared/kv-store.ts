@@ -1,6 +1,6 @@
 export class KVStore {
   static getVersion(): string {
-    return "V00.05.00";
+    return "V00.06.00";
   }
   constructor(private files: R2Bucket) {}
 

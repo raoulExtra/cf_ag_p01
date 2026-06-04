@@ -15,8 +15,11 @@ describe("Agents", () => {
       expect(agent.partnerOutputPath).toBe("/shared/agent1-input.txt");
     });
 
+it("should have getVersion", () => {
+      expect(Agent1.getVersion()).toBe("V00.06.00");
+    });
     it("should have getVersion", () => {
-      expect(Agent1.getVersion()).toBe("V00.05.00");
+      expect(Agent2.getVersion()).toBe("V00.06.00");
     });
   });
 

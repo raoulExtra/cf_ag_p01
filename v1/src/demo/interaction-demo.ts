@@ -42,7 +42,7 @@ console.log(DEMO_INTERACTIONS);
 export { DEMO_INTERACTIONS };
 
 export function getVersion(): string {
-  return "V00.05.00";
+  return "V00.06.00";
 }
 
 // Change History

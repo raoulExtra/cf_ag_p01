@@ -25,7 +25,7 @@ describe("CustomAgent", () => {
   });
 
   it("should have getVersion", () => {
-    expect(CustomAgent.getVersion()).toBe("V00.05.00");
+    expect(CustomAgent.getVersion()).toBe("V00.06.00");
   });
 
   it("should get custom tools JSON", () => {

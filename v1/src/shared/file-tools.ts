@@ -2,7 +2,7 @@ import { tool } from "ai";
 import { z } from "zod";
 
 export function getVersion(): string {
-  return "V00.05.00";
+  return "V00.06.00";
 }
 
 export const readFileTool = (env: Env) => tool({

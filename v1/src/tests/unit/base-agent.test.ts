@@ -3,7 +3,7 @@ import { BaseAgent } from "../../agents/base-agent";
 
 describe("BaseAgent", () => {
   it("should have getVersion method", () => {
-    expect(BaseAgent.getVersion()).toBe("V00.05.00");
+    expect(BaseAgent.getVersion()).toBe("V00.06.00");
   });
 
   it("should be instantiable with required parameters", () => {

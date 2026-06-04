@@ -7,7 +7,7 @@ import { KVStore } from "../shared/kv-store";
 
 export class BaseAgent extends AIChatAgent<Env> {
   static getVersion(): string {
-    return "V00.05.00";
+    return "V00.06.00";
   }
   maxPersistedMessages = 50;
   agentName: string;
@@ -24,7 +24,14 @@ export class BaseAgent extends AIChatAgent<Env> {
     this.partnerInputPath = partnerInputPath;
     this.partnerOutputPath = partnerOutputPath;
     this.modelId = modelId;
-    this.kv = new KVStore(this.env.FILES);
+    this.kv = this.getKVStore();
+  }
+
+  protected getKVStore(): KVStore {
+    if (this.simMode) {
+      return new KVStore(this.env.FILES);
+    }
+    return new KVStore(this.env.FILES);
   }
 
   setModel(modelId: string) {
@@ -105,6 +112,7 @@ Use KV store at /shared/kv/ for state. Be short and precise.`;
 //
 // | Version | Date | Author | Reason |
 // |---------|------|--------|--------|
+// | V00.06.00 | 2026-06-04 | ai(cline) | Add getKVStore for Durable Objects vs R2 |
 // | V00.05.00 | 2026-06-04 | ai(cline) | Add syst system test requirement |
 // | V00.02.00 | 2026-06-04 | ai(cline) | Apply code change history conventions |
 // | V00.01.00 | 2026-05-24 | ai(cline) | Initial implementation |

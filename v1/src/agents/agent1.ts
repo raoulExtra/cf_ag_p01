@@ -2,7 +2,7 @@ import { CustomAgent } from "./custom-agent";
 
 export class Agent1 extends CustomAgent {
   static getVersion(): string {
-    return "V00.05.00";
+    return "V00.06.00";
   }
   constructor() {
     super("Agent 1", "/shared/agent2-input.txt", "/shared/agent1-input.txt", "@cf/meta/llama-3.2-1b-instruct");
