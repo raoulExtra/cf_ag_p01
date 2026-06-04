@@ -4,6 +4,17 @@
 
 This document explains how Durable Objects are simulated using local filesystem in test mode.
 
+## Key Distinction: R2 vs Durable Objects
+
+**R2** and **Durable Objects** are DIFFERENT Cloudflare services:
+
+| Feature | R2 | Durable Objects |
+|---------|----|-----------------|
+| Type | Object Storage | Stateful Serverless Database |
+| Use Case | Files, blobs, data lakes | Stateful services, agent state |
+| Consistency | Strong global | Strong per-object |
+| Size Limit | Unlimited | 256MB per object |
+
 ## Approach
 
 Instead of deploying to Cloudflare's Durable Objects, we use a local R2 bucket simulation:
