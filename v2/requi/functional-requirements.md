@@ -9,8 +9,9 @@ See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) f
 - [x] **V2-EXPLAIN-01** explain for simulate Durable Objects with local filesystem 
 
 ### Version Separation
-- [x] **V2-VERS_SEPA-01** we make sure that v1 stays as minimal as possible and all v2 expansion have a efficient oo structure
-- [x] **V2-VERS_SEPA-02** same is valid for the sources in context of testing
+- [ ] **V2-VERS_SEPA-01** all ts code for v2 requi expansion go to \v2\src and to compareable folders like src/v1
+- [ ] **V2-VERS_SEPA-02** we make sure that v1 stays as minimal as possible and all v2 expansion have a efficient oo structure
+- [ ] **V2-VERS_SEPA-03** same is valid for the sources in context of testing 
 
 ### Storage Backend (Configurable)
 - [x] **V2-STORAGE-01** BaseAgent option "dur" to use Durable Objects instead of R2
@@ -22,11 +23,15 @@ See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) f
 - [x] **V2-TEST-02** Test V2-STORAGE requirements via integration tests
 - [x] **V2-TEST-03** Reference V2 requirements: **V2-STORAGE-01**, **V2-STORAGE-02**, **V2-STORAGE-03**
 - [x] **V2-TEST-04** Test V2-VERS_SEPA requirements in src/tests/version-separation.test.ts
+- [ ] **V2-TEST-05** Test V2-VERS_SEPA-01 directory structure in src/tests/version-separation.test.ts
+- [ ] **V2-TEST-06** Test V2-VERS_SEPA-03 testing structure in src/tests/version-separation.test.ts
 
 ### Test
 - [x] **TEST-V2-01** Integration tests for Durable Objects simulation in src/tests/integration/durable-objects-sim.test.ts
 - [x] **TEST-V2-02** Reference v2 requirements: **V2-STORAGE-01**, **V2-STORAGE-02**, **V2-STORAGE-03**
 - [x] **TEST-V2-03** Test version separation in src/tests/version-separation.test.ts
+- [ ] **TEST-V2-04** Test V2-VERS_SEPA-01 directory structure
+- [ ] **TEST-V2-05** Test V2-VERS_SEPA-03 testing structure
 
 ### Deployment
 - [x] **V2-DEPLOY-01** Storage binding (R2 or Durable Objects)
@@ -40,6 +45,7 @@ See [conventions/72_conv_change_history_for_code.md](conventions/72_conv_change_
 
 | Version | Date | Author | Reason |
 |---------|------|--------|--------|
+| V00.09.00 | 2026-06-04 | ai(cline) | Add V2-VERS_SEPA-03 and fix duplicate IDs |
 | V00.08.00 | 2026-06-04 | ai(cline) | Implement V2 version separation requirements |
 | V00.07.00 | 2026-06-04 | ai(cline) | Add V2-VERS_SEPA requirements and tests |
 | V00.06.00 | 2026-06-04 | ai(cline) | Add sim filesystem explanation |
