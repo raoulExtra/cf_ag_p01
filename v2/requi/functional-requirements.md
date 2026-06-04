@@ -47,8 +47,6 @@ See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) f
 - [x] **TEST-V2-10** v2 arg in v1 true: Test set sim mode to true: all use R2 store
 - [ ] **TEST-V2-11** Add Durable Objects binding (env.AGENTS_DO) and test it
 
-
-
 ### Deployment
 - [x] **V2-DEPLOY-01** Storage binding (R2 or Durable Objects)
 - [x] **V2-DEPLOY-02** AI binding
