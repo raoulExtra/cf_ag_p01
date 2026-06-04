@@ -1,5 +1,5 @@
 # Functional Requirements
-> Version: V00.14.00
+> Version: V00.15.00
 
 See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) for base requirements (FR-MA-*).
 
@@ -14,6 +14,8 @@ See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) f
 - [x] **V2-VERS_SEPA-03** same is valid for the sources in context of testing
 - [x] **V2-VERS_SEPA-04** Version separation is wrong if \v2\src is not filled with v2 requirements implementation
 - [x] **V2-VERS_SEPA-05** When simMode=false, use Durable Objects instead of R2 for KV store
+- [x] **V2-VERS_SEPA-06** v2/src/agents/v2-base-agent.ts is the new base agent when simMode=false, v1/src/agents/custom-agent.ts uses it to keep agent1/2 stable
+- [x] **V2-VERS_SEPA-07** FR-NF-05 v2 argument to use v2-base-agent.ts when simMode=false
 
 ### Storage Backend (Configurable)
 - [x] **V2-STORAGE-01** BaseAgent option "dur" to use Durable Objects instead of R2
@@ -29,6 +31,7 @@ See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) f
 - [x] **V2-TEST-06** Test V2-VERS_SEPA-03 testing structure in src/tests/version-separation.test.ts
 - [x] **V2-TEST-07** Test V2-VERS_SEPA-04 v2/src implementation in src/tests/version-separation.test.ts
 - [x] **V2-TEST-08** Test V2-VERS_SEPA-05 Durable Objects vs R2 in src/tests/durable-objects.test.ts
+- [x] **V2-TEST-09** Test V2-VERS_SEPA-07 v2-base-agent.ts integration in src/tests/v2-integration.test.ts
 
 ### Test
 - [x] **TEST-V2-01** Integration tests for Durable Objects simulation in src/tests/integration/durable-objects-sim.test.ts
@@ -38,6 +41,7 @@ See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) f
 - [x] **TEST-V2-05** Test V2-VERS_SEPA-03 testing structure
 - [x] **TEST-V2-06** Test V2-VERS_SEPA-04 v2/src implementation
 - [x] **TEST-V2-07** Test V2-VERS_SEPA-05 Durable Objects vs R2
+- [x] **TEST-V2-08** Test V2-VERS_SEPA-06 v2-base-agent.ts
 
 ### Deployment
 - [x] **V2-DEPLOY-01** Storage binding (R2 or Durable Objects)
@@ -51,8 +55,9 @@ See [conventions/72_conv_change_history_for_code.md](conventions/72_conv_change_
 
 | Version | Date | Author | Reason |
 |---------|------|--------|--------|
-| V00.14.00 | 2026-06-04 | ai(cline) | Complete all V2 requirements including V2-VERS_SEPA-05 |
-| V00.13.00 | 2026-06-04 | ai(cline) | Add V2-VERS_SEPA-05 Durable Objects requirement |
+| V00.15.00 | 2026-06-04 | ai(cline) | Complete all V2 requirements |
+| V00.14.00 | 2026-06-04 | ai(cline) | Add V2-VERS_SEPA-07 FR-NF-05 integration |
+| V00.13.00 | 2026-06-04 | ai(cline) | Add V2-VERS_SEPA-06 v2-base-agent.ts |
 | V00.12.00 | 2026-06-04 | ai(cline) | Complete all V2 requirements including V2-VERS_SEPA-04 |
 | V00.11.00 | 2026-06-04 | ai(cline) | Add V2-VERS_SEPA-04 requirement for v2/src implementation |
 | V00.10.00 | 2026-06-04 | ai(cline) | Complete all V2 requirements |

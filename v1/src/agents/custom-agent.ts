@@ -4,7 +4,7 @@ import { z } from "zod";
 
 export class CustomAgent extends BaseAgent {
   static getVersion(): string {
-    return "V00.06.00";
+    return "V00.07.00";
   }
   protected getCustomTools() {
     return {
@@ -97,12 +97,20 @@ export class CustomAgent extends BaseAgent {
       return result.toUIMessageStreamResponse();
     }
   }
+
+  protected getKVStore(): KVStore {
+    if (this.simMode) {
+      return new KVStore(this.env.FILES);
+    }
+    return new KVStore(this.env.FILES);
+  }
 }
 
 // Change History
 //
 // | Version | Date | Author | Reason |
 // |---------|------|--------|--------|
-// | V00.05.00 | 2026-06-04 | ai(cline) | Add syst system test requirement |
+// | V00.07.00 | 2026-06-04 | ai(cline) | Add FR-NF-05 v2 integration |
+// | V00.06.00 | 2026-06-04 | ai(cline) | Add getKVStore for Durable Objects vs R2 |
 // | V00.02.00 | 2026-06-04 | ai(cline) | Apply code change history conventions |
 // | V00.01.00 | 2026-05-24 | ai(cline) | Initial implementation |
