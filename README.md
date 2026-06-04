@@ -1,8 +1,9 @@
 # Multi-Agent System on Cloudflare Workers
 
-Phase 1 demonstrates multi-agent conventions: code has `getVersion()` and Change History per `conventions/72_conv_change_history_for_code.md`, requirements have `### Test` chapters with TDD in `src/tests/`, and edge cases are covered per `conventions/75_conv_testing_requirements.md`.
+Phase 1 demonstrates multi-agent functionality. Two AI agents communicate via R2 file storage and work in parallel. Built with Cloudflare Wrangler, agents run in isolated Durable Objects, use R2 for file storage and KV for atomic state operations.
 
-Two AI agents communicate via R2 file storage and work in parallel. Built with Cloudflare Wrangler, agents run in isolated Durable Objects, use R2 for file storage and KV for atomic state operations.
+## Content Info
+conventions: code has `getVersion()` and Change History per `conventions/72_conv_change_history_for_code.md`, requirements have `### Test` chapters with TDD in `src/tests/`, and edge cases are covered per `conventions/75_conv_testing_requirements.md`.
 
 ## Structure
 
