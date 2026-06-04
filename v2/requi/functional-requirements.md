@@ -14,6 +14,9 @@ See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) f
 - [x] **V2-STORAGE-03** R2 mode: default, uses R2 bucket
 
 ### Testing
+- [x] **V2-TEST-01** Sim mode testing for Durable Objects simulation
+- [x] **V2-TEST-02** Test V2-STORAGE requirements via integration tests
+- [x] **V2-TEST-03** Reference V2 requirements: **V2-STORAGE-01**, **V2-STORAGE-02**, **V2-STORAGE-03**
 
 ### Test
 - [x] **TEST-V2-01** Integration tests for Durable Objects simulation in src/tests/integration/durable-objects-sim.test.ts
@@ -31,5 +34,6 @@ See [conventions/72_conv_change_history_for_code.md](conventions/72_conv_change_
 
 | Version | Date | Author | Reason |
 |---------|------|--------|--------|
+| V00.05.00 | 2026-06-04 | ai(cline) | Fix testing requirements and add missing test |
 | V00.02.00 | 2026-06-04 | ai(cline) | Add Test chapter per testing convention |
 | V00.01.00 | 2026-05-25 | peter | Initial publication |
