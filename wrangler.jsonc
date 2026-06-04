@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "multi-agent",
+  "main": "v1/src/index.ts",
+  "compatibility_date": "2026-06-04",
+  "compatibility_flags": ["nodejs_compat"],
+  "ai": { "binding": "AI", "remote": true },
+  "durable_objects": {
+    "bindings": [
+      { "class_name": "Agent1", "name": "Agent1" },
+      { "class_name": "Agent2", "name": "Agent2" }
+    ]
+  },
+  "migrations": [
+    { "new_sqlite_classes": ["Agent1", "Agent2"], "tag": "v1" }
+  ],
+  "r2_buckets": [
+    { "binding": "FILES", "bucket_name": "pi-files" }
+  ]
+}
