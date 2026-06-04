@@ -5,6 +5,17 @@ Phase 1 demonstrates multi-agent functionality. Two AI agents communicate via R2
 ## Content Info
 conventions: code has `getVersion()` and Change History per `conventions/72_conv_change_history_for_code.md`, requirements have `### Test` chapters with TDD in `src/tests/`, and edge cases are covered per `conventions/75_conv_testing_requirements.md`.
 
+## Testing
+- `npm test` - Run all tests (82 tests, 100% coverage)
+- Tests verify requirements in `v1/requi/functional-requirements.md`
+- v2 tests in `v2/requi/functional-requirements.md`
+
+### Test Structure
+- `src/tests/unit/` - Unit tests for agents
+- `src/tests/integration/` - Integration tests for file/KV operations
+- `src/tests/simulation/` - Multi-agent simulation tests
+- `src/tests/demo.test.ts` - Demo module tests
+
 ## Structure
 
 ```
