@@ -12,7 +12,13 @@ describe("V2 Argument Integration Tests", () => {
     })();
   });
 
-  describe("TEST-V2-09: v2 arg true, set simMode=false, use real KV store", () => {
+  describe("TEST-CORE-10: v2 argument defaults to false", () => {
+    it("should have v2 argument default to false", () => {
+      expect(agent["useV2"]).toBe(false);
+    });
+  });
+
+  describe("TEST-CORE-09: v2 arg true, set simMode=false, use real KV store", () => {
     it("should use Durable Objects when simMode is false and v2 arg is true", () => {
       agent.setSimMode(false);
       agent.setDurableObjects(true);

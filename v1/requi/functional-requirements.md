@@ -1,5 +1,5 @@
 # Functional Requirements
-> Version: V00.01.00
+> Version: V00.02.00
 
 ## Multi-Agent System
 
@@ -68,6 +68,7 @@
 - [x] **FR-NF-03** Atomic counter increments
 - [x] **FR-NF-04** Message persistence
 - [x] **FR-NF-05** v2 integration: have v2 argument to use v2/src/agents/v2-base-agent.ts when simMode=false
+- [ ] **FR-NF-06** v2 argument defaults to false to preserve v1 behavior
 
 ## Testing
 - [x] **FR-TEST-01** Sim mode for testing without consuming tokens
@@ -85,6 +86,7 @@
 - [x] **TEST-CORE-07** Reference core requirements: **FR-MA-CORE-01**, **FR-MA-CORE-02**, **FR-MA-CORE-03**
 - [x] **TEST-CORE-08** System test via `syst` argument for interaction without sim
 - [x] **TEST-CORE-09** Have v2 argument to use v2/src/agents/v2-base-agent.ts when true
+- [ ] **TEST-CORE-10** v2 argument defaults to false
 
 ---
 
@@ -94,6 +96,7 @@ See [conventions/72_conv_change_history_for_code.md](conventions/72_conv_change_
 
 | Version | Date | Author | Reason |
 |---------|------|--------|--------|
+| V00.07.00 | 2026-06-04 | ai(cline) | Add FR-NF-06 v2 defaults to false |
 | V00.06.00 | 2026-06-04 | ai(cline) | Add FR-NF-05 v2 integration requirement |
 | V00.05.00 | 2026-06-04 | ai(cline) | Add syst system test requirement |
 | V00.04.00 | 2026-06-04 | ai(cline) | Add comprehensive tests per testing convention |

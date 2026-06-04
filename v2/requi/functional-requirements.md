@@ -1,5 +1,5 @@
 # Functional Requirements
-> Version: V00.17.00
+> Version: V00.18.00
 
 See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) for base requirements (FR-MA-*).
 
@@ -16,7 +16,8 @@ See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) f
 - [x] **V2-VERS_SEPA-05** When simMode=false, use Durable Objects instead of R2 for KV store
 - [x] **V2-VERS_SEPA-06** v2/src/agents/v2-base-agent.ts is the new base agent when simMode=false, v1/src/agents/custom-agent.ts uses it to keep agent1/2 stable
 - [x] **V2-VERS_SEPA-07** FR-NF-05 v2 argument to use v2-base-agent.ts when simMode=false
-- [ ] **V2-VERS_SEPA-08** Add Durable Objects binding (env.AGENTS_DO) for real DO storage
+- [x] **V2-VERS_SEPA-08** Add Durable Objects binding (env.AGENTS_DO) for real DO storage
+- [x] **V2-VERS_SEPA-09** FR-NF-06 v2 argument defaults to false
 
 ### Storage Backend (Configurable)
 - [x] **V2-STORAGE-01** BaseAgent option "dur" to use Durable Objects instead of R2
@@ -45,7 +46,8 @@ See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) f
 - [x] **TEST-V2-08** Test V2-VERS_SEPA-06 v2-base-agent.ts
 - [x] **TEST-V2-09** v2 arg in v1 true: Test set sim mode to false: all use real KV store
 - [x] **TEST-V2-10** v2 arg in v1 true: Test set sim mode to true: all use R2 store
-- [ ] **TEST-V2-11** Add Durable Objects binding (env.AGENTS_DO) and test it
+- [x] **TEST-V2-11** Add Durable Objects binding (env.AGENTS_DO) and test it
+- [x] **TEST-V2-12** v2 argument defaults to false
 
 ### Deployment
 - [x] **V2-DEPLOY-01** Storage binding (R2 or Durable Objects)
@@ -59,6 +61,7 @@ See [conventions/72_conv_change_history_for_code.md](conventions/72_conv_change_
 
 | Version | Date | Author | Reason |
 |---------|------|--------|--------|
+| V00.18.00 | 2026-06-04 | ai(cline) | Complete FR-NF-06 v2 defaults to false |
 | V00.17.00 | 2026-06-04 | ai(cline) | Add V2-VERS_SEPA-08 Durable Objects binding requirement |
 | V00.16.00 | 2026-06-04 | ai(cline) | Complete all V2 requirements including TEST-V2-09/10 |
 | V00.15.00 | 2026-06-04 | ai(cline) | Complete all V2 requirements |
