@@ -44,10 +44,10 @@ src/
 # Install dependencies
 npm install
 
-# Development
+# Development (sim mode - no tokens consumed)
 npm run dev
 
-# Deploy
+# Deploy to production
 npx wrangler deploy
 
 # Chat with Agent 1
@@ -55,6 +55,23 @@ curl -X POST https://multi-agent.workers.dev/agent1 \
   -H "Content-Type: application/json" \
   -d '{"messages":[{"role":"user","content":"Hello"}]}'
 ```
+
+### Running Modes
+
+| Mode | Description |
+|------|-------------|
+| Sim Mode (default) | Tests without consuming tokens, uses dummy responses |
+| Production Mode | Uses real Workers AI, requires AI binding |
+
+### v1 vs v2
+
+| | v1 | v2 |
+|---|---|---|
+| Storage (sim mode) | R2 bucket | Local filesystem |
+| Storage (prod mode) | R2 bucket | Durable Objects |
+| Default | `simMode=true` | `simMode=true` |
+
+To use v2 production features, set `simMode=false` and configure Durable Objects binding.
 
 ## Communication
 
