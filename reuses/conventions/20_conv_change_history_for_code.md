@@ -5,14 +5,14 @@ tags:
 - conventions
 persona: kilo_extension
 status: active
-version: V00.04.00
+version: V00.05.00
 updated: 2026-06-04
 summary: 'Convention document: Change History for code.'
 ```
 
 # Convention: Change History for code
 
-> Version: V00.04.00
+> Version: V00.05.00
 
 ## Rule
 
@@ -79,6 +79,7 @@ __version__ = "V00.01.00"
 
 | Version | Date | Author | Reason |
 |---------|------|--------|--------|
+| V00.05.00 | 2026-06-05 | ai(cline) | Move conventions to reuses/conventions |
 | V00.04.00 | 2026-06-04 | ai(cline) | Add link to 10_conv_versions.md in Author constraint |
 | V00.02.00 | 2026-06-04 | ai(kilo laguna) | Add getVersion() requirement |
 | V00.01.00 | 2026-05-24 | ai(cline) | Initial implementation |
