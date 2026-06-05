@@ -58,7 +58,7 @@ See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) f
 
 ## Change History
 
-See [conventions/20_conv_change_history_for_code.md](conventions/20_conv_change_history_for_code.md) for code change history conventions.
+See [reuses/conventions/20_conv_change_history_for_code.md](reuses/conventions/20_conv_change_history_for_code.md) for code change history conventions.
 
 | Version | Date | Author | Reason |
 |---------|------|--------|--------|
