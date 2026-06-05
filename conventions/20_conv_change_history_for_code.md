@@ -32,7 +32,7 @@ Source code files SHOULD include a comment block tracking changes over time.
 
 - `Version`
   - MUST use the repo version format: `V00.01.00`
-  - See: `70_conv_versions.md`
+  - See: `10_conv_versions.md`
 - `Date`
   - MUST use ISO format: `YYYY-MM-DD`
 - `Author`

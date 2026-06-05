@@ -92,7 +92,7 @@
 
 ## Change History
 
-See [conventions/72_conv_change_history_for_code.md](conventions/72_conv_change_history_for_code.md) for code change history conventions.
+See [conventions/20_conv_change_history_for_code.md](conventions/20_conv_change_history_for_code.md) for code change history conventions.
 
 | Version | Date | Author | Reason |
 |---------|------|--------|--------|
