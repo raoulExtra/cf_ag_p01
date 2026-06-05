@@ -5,14 +5,14 @@ tags:
 - conventions
 persona: kilo_extension
 status: active
-version: V00.01.00
-updated: 2026-05-24
+version: V00.04.00
+updated: 2026-06-04
 summary: 'Convention document: Change History for code.'
 ```
 
 # Convention: Change History for code
 
-> Version: V00.01.00
+> Version: V00.04.00
 
 ## Rule
 
@@ -36,7 +36,8 @@ Source code files SHOULD include a comment block tracking changes over time.
 - `Date`
   - MUST use ISO format: `YYYY-MM-DD`
 - `Author`
-  - SHOULD be a stable identifier (e.g. `peter`, `ai(kilo)`)
+  - SHOULD be a dynamic identifier "## Current AI" (e.g. `peter`, `ai(kilo laguna)`)
+  - See: [10_conv_versions.md](10_conv_versions.md)
 - `Reason`
   - MUST be short and specific (what changed + why)
 - `getVersion()`
@@ -78,5 +79,6 @@ __version__ = "V00.01.00"
 
 | Version | Date | Author | Reason |
 |---------|------|--------|--------|
-| V00.02.00 | 2026-06-04 | ai(cline) | Add getVersion() requirement |
+| V00.04.00 | 2026-06-04 | ai(cline) | Add link to 10_conv_versions.md in Author constraint |
+| V00.02.00 | 2026-06-04 | ai(kilo laguna) | Add getVersion() requirement |
 | V00.01.00 | 2026-05-24 | ai(cline) | Initial implementation |

@@ -1,6 +1,10 @@
 import { BaseAgent } from "./base-agent";
+import { V2BaseAgent } from "../../v2/src/agents/v2-base-agent";
+import { KVStore } from "../shared/kv-store";
 import { tool } from "ai";
 import { z } from "zod";
+
+const VERSION = "V00.09.00";
 
 export class CustomAgent extends BaseAgent {
   private useV2: boolean = false;
@@ -22,8 +26,11 @@ export class CustomAgent extends BaseAgent {
     if (this.simMode) {
       return new KVStore(this.env.FILES);
     }
-    if (this.useV2 && this.durableObjectsEnabled) {
-      return new KVStore(this.env.FILES);
+    if (this.useV2) {
+      const v2Agent = new V2BaseAgent(this.agentName, this.partnerInputPath, this.partnerOutputPath, this.modelId);
+      v2Agent.setSimMode(false);
+      v2Agent.setDurableObjects(this.durableObjectsEnabled);
+      return v2Agent.getKVStore();
     }
     return new KVStore(this.env.FILES);
   }
@@ -118,19 +125,13 @@ export class CustomAgent extends BaseAgent {
       return result.toUIMessageStreamResponse();
     }
   }
-
-  protected getKVStore(): KVStore {
-    if (this.simMode) {
-      return new KVStore(this.env.FILES);
-    }
-    return new KVStore(this.env.FILES);
-  }
 }
 
 // Change History
 //
 // | Version | Date | Author | Reason |
 // |---------|------|--------|--------|
+// | V00.09.00 | 2026-06-04 | ai(cline) | Fix getKVStore to use V2BaseAgent when useV2=true |
 // | V00.08.00 | 2026-06-04 | ai(cline) | Add V2 arg and Durable Objects support |
 // | V00.07.00 | 2026-06-04 | ai(cline) | Add FR-NF-05 v2 integration |
 // | V00.06.00 | 2026-06-04 | ai(cline) | Add getKVStore for Durable Objects vs R2 |

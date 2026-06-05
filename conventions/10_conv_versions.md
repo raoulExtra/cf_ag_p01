@@ -1,21 +1,24 @@
 ```yaml
 title: 'Convention: versioning of markdown docs'
 tags:
-- ai_entities
+- version
 - conventions
 persona: kilo_extension
 status: active
-version: V00.01.00
-updated: 2026-05-24
+version: V00.02.00
+updated: 2026-06-05
 summary: 'Convention document: Convention: versioning of markdown docs.'
 ```
 
 # Convention: versioning of markdown docs
-> Version: V00.01.00
+> Version: V00.02.00
 
 ## Purpose
 
 Standardize how we record versions and change history inside markdown documents.
+
+## Current AI
+author ai(cline)
 
 ## Version format
 
@@ -67,4 +70,5 @@ Rules:
 
 | Version | Date | Author | Reason |
 |---------|------|--------|--------|
+| V00.02.00 | 2026-06-05 | ai(cline) | Update current AI identifier |
 | V00.01.00 | 2026-05-24 | ai(cline) | Migrate markdown versioning convention into canonical ai_env/conventions |

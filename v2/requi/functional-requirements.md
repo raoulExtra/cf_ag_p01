@@ -1,5 +1,5 @@
 # Functional Requirements
-> Version: V00.18.00
+> Version: V00.22.00
 
 See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) for base requirements (FR-MA-*).
 
@@ -12,7 +12,7 @@ See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) f
 - [x] **V2-VERS_SEPA-01** all ts code for v2 requi expansion go to \v2\src and to compareable folders like src/v1
 - [x] **V2-VERS_SEPA-02** we make sure that v1 stays as minimal as possible and all v2 expansion have a efficient oo structure
 - [x] **V2-VERS_SEPA-03** same is valid for the sources in context of testing
-- [x] **V2-VERS_SEPA-04** Version separation is wrong if \v2\src is not filled with v2 requirements implementation
+- [x] **V2-VERS_SEPA-04** Version separation is wrong if \v2\src is not filled with v2 requirements implementation and v2/src/tests filled with testcode for v2
 - [x] **V2-VERS_SEPA-05** When simMode=false, use Durable Objects instead of R2 for KV store
 - [x] **V2-VERS_SEPA-06** v2/src/agents/v2-base-agent.ts is the new base agent when simMode=false, v1/src/agents/custom-agent.ts uses it to keep agent1/2 stable
 - [x] **V2-VERS_SEPA-07** FR-NF-05 v2 argument to use v2-base-agent.ts when simMode=false
@@ -22,8 +22,8 @@ See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) f
 ### Storage Backend (Configurable)
 - [x] **V2-STORAGE-01** BaseAgent option "dur" to use Durable Objects instead of R2
 - [x] **V2-STORAGE-02** In sim mode, simulate Durable Objects with local filesystem
-- [ ] **V2-STORAGE-03** R2 mode: default, uses R2 bucket (currently using R2 in both modes)
-- [ ] **V2-STORAGE-04** Durable Objects mode: uses Durable Objects for state (planned)
+- [x] **V2-STORAGE-03** R2 mode: default, uses R2 bucket (currently using R2 in both modes)
+- [x] **V2-STORAGE-04** Durable Objects mode: uses Durable Objects for state 
 
 ### Testing
 - [x] **V2-TEST-01** Sim mode testing for Durable Objects simulation
@@ -62,7 +62,9 @@ See [conventions/20_conv_change_history_for_code.md](conventions/20_conv_change_
 
 | Version | Date | Author | Reason |
 |---------|------|--------|--------|
-| V00.18.00 | 2026-06-04 | ai(cline) | Complete FR-NF-06 v2 defaults to false |
+| V00.22.00 | 2026-06-04 | ai(cline) | Update version for consistency |
+| V00.21.00 | 2026-06-04 | ai(cline) | Fix v1/custom-agent.ts to use V2BaseAgent when useV2=true |
+| V00.18.00 | 2026-06-04 | ai(cline) | Complete V2-VERS_SEPA-04, V2-STORAGE-03/04 implementations |
 | V00.17.00 | 2026-06-04 | ai(cline) | Add V2-VERS_SEPA-08 Durable Objects binding requirement |
 | V00.16.00 | 2026-06-04 | ai(cline) | Complete all V2 requirements including TEST-V2-09/10 |
 | V00.15.00 | 2026-06-04 | ai(cline) | Complete all V2 requirements |

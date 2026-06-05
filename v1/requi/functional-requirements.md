@@ -1,5 +1,5 @@
 # Functional Requirements
-> Version: V00.02.00
+> Version: V00.09.00
 
 ## Multi-Agent System
 
@@ -96,6 +96,8 @@ See [conventions/20_conv_change_history_for_code.md](conventions/20_conv_change_
 
 | Version | Date | Author | Reason |
 |---------|------|--------|--------|
+| V00.09.00 | 2026-06-04 | ai(cline) | Fix getKVStore to use V2BaseAgent when useV2=true |
+| V00.08.00 | 2026-06-04 | ai(cline) | Add V2 arg and Durable Objects support |
 | V00.07.00 | 2026-06-04 | ai(cline) | Add FR-NF-06 v2 defaults to false |
 | V00.06.00 | 2026-06-04 | ai(cline) | Add FR-NF-05 v2 integration requirement |
 | V00.05.00 | 2026-06-04 | ai(cline) | Add syst system test requirement |
