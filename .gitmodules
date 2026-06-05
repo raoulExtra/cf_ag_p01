@@ -1,0 +1,3 @@
+[submodule "reuses"]
+	path = reuses
+	url = https://github.com/raoulExtra/reuses.git
