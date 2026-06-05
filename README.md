@@ -67,11 +67,11 @@ curl -X POST https://multi-agent.workers.dev/agent1 \
 
 | | v1 | v2 |
 |---|---|---|
-| Storage (sim mode) | R2 bucket | Local filesystem |
-| Storage (prod mode) | R2 bucket | Durable Objects |
+| Storage | R2 bucket (`env.FILES`) | R2 bucket (`env.FILES`) |
+| KV Store | R2-backed | R2-backed (planned: Durable Objects) |
 | Default | `simMode=true` | `simMode=true` |
 
-To use v2 production features, set `simMode=false` and configure Durable Objects binding.
+**Note:** v2 has planned Durable Objects support for production mode (see `V2-VERS_SEPA-05`).
 
 ### Documentation
 
