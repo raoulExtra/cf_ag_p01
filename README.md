@@ -77,7 +77,7 @@ curl -X POST https://multi-agent.workers.dev/agent1 \
 
 - [D1 Database Explanation](v1/explain/explain-D1.md) - SQLite-like database for structured data
 - [R2 Storage Explanation](v1/explain/explain-R2.md) - Object storage for files
-- [Available Models](v1/requi/avail_models.md) - AI models supported
+- [Available Models](v1/requi/avail-models.md) - AI models supported
 
 ### Streamlined API Setup
 

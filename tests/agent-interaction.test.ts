@@ -146,7 +146,7 @@ export class Agent2 extends CustomAgent {
   });
 
   it("should support tool calling with granite model (FR-MA-AI-09)", () => {
-    const availModels = readFile("../v1/requi/avail_models.md");
+    const availModels = readFile("../v1/requi/avail-models.md");
     expect(availModels).toContain("@cf/ibm-granite/granite-4.0-h-micro");
     expect(availModels).toContain("tool calling");
   });

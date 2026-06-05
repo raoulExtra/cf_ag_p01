@@ -48,7 +48,7 @@
 - [x] **FR-MA-AI-05** Agent1 & Agent2 can use different models (e.g.'@cf/ibm-granite/granite-4.0-h-micro')
 - [x] **FR-MA-AI-06** Free tier (10,000 Neurons/day)
 - [x] **FR-MA-AI-07** Model configurable via constructor and `setModel()` method
-- [x] **FR-MA-AI-08** See v1/requi/avail_models.md for available models
+- [x] **FR-MA-AI-08** See v1/requi/avail-models.md for available models
 - [x] **FR-MA-AI-09** `@cf/ibm-granite/granite-4.0-h-micro` supports tool calling
 
 ### Deployment
