@@ -71,7 +71,7 @@ curl -X POST https://multi-agent.workers.dev/agent1 \
 | KV Store | R2-backed | R2-backed (planned: Durable Objects) |
 | Default | `simMode=true` | `simMode=true` |
 
-**Note:** v2 has planned Durable Objects support for production mode (see `V2-VERS_SEPA-05`).
+**Note:** v2 has planned Durable Objects support for production mode (see `V2-STORAGE-04` in `v2/requi/functional-requirements.md`).
 
 ### Documentation
 

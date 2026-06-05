@@ -22,7 +22,8 @@ See [v1/requi/functional-requirements.md](v1/requi/functional-requirements.md) f
 ### Storage Backend (Configurable)
 - [x] **V2-STORAGE-01** BaseAgent option "dur" to use Durable Objects instead of R2
 - [x] **V2-STORAGE-02** In sim mode, simulate Durable Objects with local filesystem
-- [x] **V2-STORAGE-03** R2 mode: default, uses R2 bucket
+- [ ] **V2-STORAGE-03** R2 mode: default, uses R2 bucket (currently using R2 in both modes)
+- [ ] **V2-STORAGE-04** Durable Objects mode: uses Durable Objects for state (planned)
 
 ### Testing
 - [x] **V2-TEST-01** Sim mode testing for Durable Objects simulation
