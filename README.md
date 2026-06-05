@@ -73,6 +73,26 @@ curl -X POST https://multi-agent.workers.dev/agent1 \
 
 To use v2 production features, set `simMode=false` and configure Durable Objects binding.
 
+### Documentation
+
+- [D1 Database Explanation](v1/explain/explain-D1.md) - SQLite-like database for structured data
+- [R2 Storage Explanation](v1/explain/explain-R2.md) - Object storage for files
+- [Available Models](v1/requi/avail_models.md) - AI models supported
+
+### Streamlined API Setup
+
+For a quick production setup, add these bindings to `wrangler.jsonc`:
+
+```json
+{
+  "bindings": [
+    { "name": "AI", "type": "ai" },
+    { "name": "FILES", "type": "r2", "bucket_name": "your-bucket" },
+    { "name": "AGENTS_DO", "type": "durable_object", "class_name": "Agent", "script_name": "multi-agent" }
+  ]
+}
+```
+
 ## Communication
 
 Agents communicate via R2 paths:
