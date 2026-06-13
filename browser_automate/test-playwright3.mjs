@@ -1,0 +1,14 @@
+import { chromium } from '@playwright/test';
+
+(async () => {
+  // Try using the chromium binary from the snap
+  const browser = await chromium.launch({
+    executablePath: '/snap/chromium/3459/usr/lib/chromium-browser/chrome',
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
+  const page = await browser.newPage();
+  await page.goto('https://example.com');
+  console.log('Page title:', await page.title());
+  await browser.close();
+})();

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://app.kilo.ai/config.json",
+
+  "permission": { },
+
+  "skills": {
+    "paths": [
+      "/home/peter/sync/project_word/.kilo/skills"
+    ]
+  },
+
+  "model": "l2/laguna-xs.2:free",
+
+  "disabled_providers": ["lmstudio"],
+
+  "provider": {
+    "l": {
+      "name": "l",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://172.25.80.1:1234/v1"
+      },
+      "models": {
+        "gemma-4-e2b-it": {
+          "name": "gemma-4-e2b-it"
+        },
+        "qwen3.5-4b": {
+          "name": "qwen3.5-4b"
+        }
+      }
+    },
+
+    "y": {
+      "name": "y",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://127.0.0.1:35371/v1"
+      },
+      "models": {
+        "laguna-xy.2:free": {
+          "name": "laguna-xs.2:free"
+        }
+      }
+    }
+  },
+
+  "indexing": {
+    "enabled": true,
+    "provider": "openai"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "browsers": {
+    "chromium": {
+      "executablePath": "/snap/chromium/3459/usr/lib/chromium-browser/chrome",
+      "libraryPath": "/snap/chromium/3459/usr/lib/x86_64-linux-gnu"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+Free Online Gantt Chart Software. No Signup and No Download Required. 100% Free Forever.
+Try Cloud
+
+* This 100% free tool allows you to save your gantt charts on your computer as .gantt files. Try our cloud tool to save your gantt charts on our cloud and share with your team.
+★★★★★ Reviews
+
+New
+Open (.gantt file)
+Save As (.gantt file)
+Import / Export
+Today
+All Tasks
+Remaining Tasks
+Overdue Tasks
+Project View
+Resource View
+Edit Resources
+Edit Settings
+Share
+Revisions
+
+Add
+Expand all
+Collapse all
+Zoom in
+Zoom out
+Zoom to fit
+	
+ID
+	
+Task Name
+	
+Start
+	
+End
+	
+Duration
+	
+Progress %
+	
+Dependency
+	
+Resources
+	
+Color
+	1	
+Example
+	2026-06-08	2026-06-26	15 days	50			
+
+	2	
+Example Task 1
+	2026-06-08	2026-06-12	5 days	80		Team Member 1	
+
+	3	
+Example Task 2
+	2026-06-15	2026-06-19	5 days	50	2FS	Team Member 2	
+
+	4	
+Example Task 3
+	2026-06-22	2026-06-26	5 days	20	3FS	Team Member 3	
+
+	5	
+Example Milestone
+	2026-06-26	2026-06-26	0 days	0	4FS	Team Member 3	
+2026-06-07
+2026-06-14
+2026-06-21
+2026-06-28
+2026-07-05
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+[Sponsored] Need a project management tool beyond gantt charts? Check out this tool. FREE FOREVER.
+
+[Sponsored] Need advanced PowerPoint visuals for gantt charts? Try this tool.
+
+We would love to hear from you! Contact us at contact@onlinegantt.com to share feedbacks, report bugs, or suggest new features.
+About Us | Testimonials | Templates | AI | API | Terms | Privacy
+
+Translate this page

@@ -12,6 +12,7 @@
   "dependencies": {
     "@cloudflare/ai-chat": "^0.8.0",
     "@cloudflare/kumo": "^2.4.1",
+    "@playwright/test": "^1.60.0",
     "agents": "^0.14.0",
     "ai": "^6.0.194",
     "react": "^19.2.7",

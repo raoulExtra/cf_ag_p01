@@ -1,0 +1,9 @@
+{
+  "name": "tmp-openai-kilo-proxy",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "proxy": "node ./openai-kilo-proxy.js",
+    "proxy:quiet": "OPENAI_KILO_PROXY_LOG_IO=0 node ./openai-kilo-proxy.js"
+  }
+}
